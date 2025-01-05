@@ -6,7 +6,7 @@ type Direction = "left" | "top" | "right" | "bottom";
 
 // const value: Direction = "top";
 
-function moveTo(direction: Direction) {
+function moveToFn(direction: Direction) {
   switch (direction) {
     case "left":
       console.log("move to left");
@@ -26,16 +26,4 @@ function moveTo(direction: Direction) {
   }
 }
 
-moveTo("right");
-
-type METHOD = "GET" | "POST";
-declare function handleRequest(url: string, method: METHOD): void;
-
-const req: { url: string; method: METHOD } = {
-  url: "https://example.com",
-  method: "GET",
-};
-
-req.method = "POST";
-
-handleRequest(req.url, req.method);
+moveToFn("right");
